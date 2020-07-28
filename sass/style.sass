@@ -1,0 +1,84 @@
+$font-stack: Finger Paint,  Avenir, Helvetica, Arial, sans-serif
+$primary-color: rgb(44, 62, 80)
+$secondary-color: rgb(167, 75, 75)
+$yellow: rgb(240, 199, 88)
+$black: #000
+$white: #fff
+%padding-shared
+    padding-top: 39px
+%opacity-shared
+    opacity: 0
+%transition-shared
+    transition: opacity 1s
+html
+    margin: 0
+    padding: 0
+    background-color: rgb(250, 247, 228)
+div
+    background-color: rgb(250, 247, 228)
+.main
+    margin-top: 100px
+    
+
+.header-top
+    left: 0
+    top: 0
+    height: 150px
+    background: $yellow
+    width: 100%
+    text-align: center
+    margin: 0
+    position: fixed
+
+.content
+    background-color: $secondary-color
+    margin-top: 300px
+    padding: 30px
+    hr
+        width: 150px
+        border: 1px solid 
+
+ul
+    display: flex
+    justify-content: center
+    align-items: bottom
+    li
+        list-style: none
+        padding: 10px
+        color: $black
+
+.black
+    color: $black
+    font-weight: bold
+.white
+    color: $white
+.inline
+    display: inline
+
+.fade-enter-active
+    @extend %transition-shared
+.fade-leave-active
+    @extend %transition-shared
+
+.fade-enter
+    @extend %opacity-shared
+.fade-leave
+    @extend %opacity-shared
+.fade-leave-to
+    @extend %opacity-shared
+
+.lorem
+    @extend %padding-shared
+.add
+    @extend %padding-shared
+
+button
+    border-radius: 7px
+    border: 2px solid #000
+    color: $black
+    background: rgba(255, 255, 255, .7)
+    outline: none
+    padding: 4px 15px
+
+.unshift
+    flex-direction: column
