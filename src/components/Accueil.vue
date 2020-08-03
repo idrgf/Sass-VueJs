@@ -1,6 +1,8 @@
 <template>
 <div>
     <div class="main">
+
+        <!--animation au clique-->
         <div class="content">
             <hr>
             <h1>{{ t }}</h1>
@@ -19,7 +21,7 @@
             >light</button>
         </div>
 
-
+        <!--texte visible invisible avec effet de transition-->
         <div class="lorem">
             <transition name="fade">
                 <div v-if="visible">
@@ -29,7 +31,7 @@
             <button v-on:click="toggle">toggle</button>
         </div>
 
-
+        <!--transition des blocks aleatoire-->
         <div>
             <ul>
                 <transition-group name="flip-list" tag="ul">
@@ -42,14 +44,16 @@
             <button v-on:click="shuffle">shuffle</button>
         </div>
 
-
+        <!--ajout de nombre aleatoire-->
         <div class="add">
             <button v-on:click="add">ajouter</button>
             <button v-on:click="remove">retirer</button>
             <ul class="unshift">
                 <li
                     v-for="number in numbers"
-                    v-bind:key="number">{{ number }}</li>
+                    v-bind:key="number">
+                        {{ number }}
+                </li>
             </ul>
         </div>
         

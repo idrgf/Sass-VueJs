@@ -2,6 +2,7 @@
     <div class="main">
         <div class="content">
             <h1>Contact</h1>
+
             <form>
                 <label for="name">Nom :</label>
                 <input v-model="name" type="text" id="name">
@@ -11,6 +12,17 @@
 
                 <label for="message">Message :</label>
                 <textarea v-model="message" id="message" cols="30" rows="10"></textarea>
+
+                <!--select a choix multiple dynamique-->
+                <label for="selected">Vous souhaitez etre selectionné par: </label>
+                <select v-model="selected" id="selected">
+                    <option
+                        v-for="option in options"
+                        v-bind:key="option.value">
+                        {{ option.text }}
+                    </option>
+                </select>
+                <p>Sélectionné : {{ selected }}</p>
             </form>
 
             <p>Signé : {{ fullname }}</p>
@@ -26,7 +38,12 @@ export default {
         return{
             name: '',
             firstname: '',
-            message:''
+            message:'',
+            selected: 'telephone',
+            options:[
+                {text: 'telephone', value: 'telephone' },
+                {text: 'mail', value: 'mail' }
+            ]
         }
     },
     computed: {

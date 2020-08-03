@@ -26,6 +26,7 @@ export default {
 </script>
 
 <style lang="sass">
+//import de sass
   @import "sass/style.sass"
   #app
       font: $font-stack
