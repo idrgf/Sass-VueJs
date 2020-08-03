@@ -16,6 +16,11 @@ const router = new VueRouter({
   routes: Routes,
   mode: 'history'
 })
+
+Vue.filter('currencydecimal', function (value){
+  return value.toFixed(2)
+})
+
 Vue.filter('reverse', function (value){
   return value.split('').reverse().join('')
 })

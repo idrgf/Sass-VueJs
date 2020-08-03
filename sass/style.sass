@@ -4,21 +4,31 @@ $secondary-color: rgb(167, 75, 75)
 $yellow: rgb(240, 199, 88)
 $black: #000
 $white: #fff
+
+%margin-top-shared
+    margin-top: 300px
 %padding-shared
     padding-top: 39px
 %opacity-shared
     opacity: 0
 %transition-shared
     transition: opacity 1s
+
 html
     margin: 0
     padding: 0
-    background-color: rgb(250, 247, 228)
-div
-    background-color: rgb(250, 247, 228)
+
+
 .main
-    margin-top: 100px
-    
+    @extend %margin-top-shared
+    width: 80%
+    float: right
+    background-color: rgb(250, 247, 228)
+
+.twenty
+    width: 20%
+    float: left
+    padding: 150px 0
 
 .header-top
     left: 0
@@ -32,11 +42,19 @@ div
 
 .content
     background-color: $secondary-color
-    margin-top: 300px
     padding: 30px
     hr
         width: 150px
-        border: 1px solid 
+        border: 1px solid
+
+.aside
+    border-right: 2px solid #000
+    border-bottom: 2px solid #000
+    border-radius: 0 0 7px 0
+    height: 600px
+    margin-top: 150px
+    background: linear-gradient( #F0C759, #f0c75880)
+       
 
 ul
     display: flex
@@ -80,5 +98,11 @@ button
     outline: none
     padding: 4px 15px
 
+.dark
+    background: $primary-color
+    color: #fff
+
+.light
+    color: $primary-color
 .unshift
     flex-direction: column
